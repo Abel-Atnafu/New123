@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You, Always ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&family=Dancing+Script:wght@500;700&family=Lato:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="petals" aria-hidden="true"></div>
+
+  <header class="hero">
+    <p class="hero-for">for</p>
+    <h1 class="hero-name">Naomi</h1>
+    <p class="hero-sub">open one whenever you need it &hearts;</p>
+  </header>
+
+  <main class="grid" id="grid"></main>
+
+  <footer class="footer">
+    <p>made with love by Abel &hearts;</p>
+  </footer>
+
+  <div class="overlay" id="overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="letter-wrap" id="letter-wrap">
+      <button class="close-btn" id="close-btn" aria-label="Close">&times;</button>
+      <article class="letter">
+        <p class="letter-tag" id="letter-tag"></p>
+        <img class="letter-img" id="letter-img" src="" alt="">
+        <div class="letter-text" id="letter-text"></div>
+        <p class="letter-sign">&#8212; Abel &hearts;</p>
+      </article>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
