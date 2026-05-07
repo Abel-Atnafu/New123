@@ -232,18 +232,19 @@ function handleClick(id, card) {
 function openLetter(id) {
   const env     = envelopes[id];
   const overlay = document.getElementById('overlay');
-  const tag     = document.getElementById('letter-tag');
-  const img     = document.getElementById('letter-img');
-  const text    = document.getElementById('letter-text');
+  const tag   = document.getElementById('letter-tag');
+  const frame = document.getElementById('letter-img-frame');
+  const img   = document.getElementById('letter-img');
+  const text  = document.getElementById('letter-text');
 
   tag.textContent = env.label;
 
   if (env.photo) {
     img.src = env.photo;
-    img.style.display = 'block';
-    img.onerror = () => { img.style.display = 'none'; };
+    frame.classList.add('has-photo');
+    img.onerror = () => { frame.classList.remove('has-photo'); };
   } else {
-    img.style.display = 'none';
+    frame.classList.remove('has-photo');
   }
 
   text.innerHTML = env.letter.map(p => `<p>${p}</p>`).join('');

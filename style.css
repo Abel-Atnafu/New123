@@ -423,15 +423,26 @@ body {
   clear: both;
 }
 
-.letter-img {
+.letter-img-frame {
   width: 100%;
-  height: 230px;
-  object-fit: cover;
-  object-position: center 20%;
-  border-radius: 10px;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
   margin-bottom: 1.6rem;
-  display: none;
   box-shadow: 0 4px 18px rgba(100, 40, 30, 0.18);
+  display: none;
+}
+
+.letter-img-frame.has-photo {
+  display: block;
+}
+
+.letter-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
 }
 
 .letter-text p {
