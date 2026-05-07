@@ -437,12 +437,24 @@ body {
   display: block;
 }
 
+/* Natural-size: removes square crop, shows the full image */
+.letter-img-frame.natural-size {
+  aspect-ratio: unset;
+  height: auto;
+}
+
 .letter-img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 18%;
+}
+
+.letter-img-frame.natural-size .letter-img {
+  height: auto;
+  object-fit: unset;
+  object-position: unset;
 }
 
 .letter-text p {

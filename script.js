@@ -55,6 +55,7 @@ const envelopes = [
   {
     label: "Open when it's late and you can't sleep",
     photo: "images/05.jpg",
+    naturalSize: true,
     letter: [
       "Hey. Put your phone down after this — I mean it.",
       "I know what nighttime does. It makes everything feel louder. Worries that are manageable at noon become enormous at 2am. You're not broken for this — it's just quiet enough for your thoughts to show up.",
@@ -66,6 +67,7 @@ const envelopes = [
   {
     label: "Open when you're having a bad day",
     photo: "images/06.jpg",
+    naturalSize: true,
     letter: [
       "Ugh. I'm sorry. Bad days are the worst.",
       "Whatever happened today — the frustration, the unfairness, the exhaustion — it's valid. All of it. You don't have to be graceful about a bad day.",
@@ -238,6 +240,8 @@ function openLetter(id) {
   const text  = document.getElementById('letter-text');
 
   tag.textContent = env.label;
+
+  frame.classList.toggle('natural-size', !!env.naturalSize);
 
   if (env.photo) {
     img.src = env.photo;
